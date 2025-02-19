@@ -1,0 +1,19 @@
+{
+  "name": "dojo",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmunozcd/dojo.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/pmunozcd/dojo/issues"
+  },
+  "homepage": "https://github.com/pmunozcd/dojo#readme"
+}
