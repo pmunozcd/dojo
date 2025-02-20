@@ -1,0 +1,48 @@
+<!--<h1>Books</h1>-->
+<!--<div *ngFor="let book of books">-->
+<!--  <h2>{{ book.title }}</h2>-->
+<!--  <p>{{ book.author }}</p>-->
+<!--</div>-->
+
+<div class="container">
+  <h2>Books List</h2>
+
+  <!-- Search Books -->
+  <div>
+    <input
+      type="text"
+      [(ngModel)]="searchTitle"
+      placeholder="Search by title"
+      (input)="searchBooksByTitle()"
+    />
+  </div>
+
+  <!-- List of Books -->
+  <ul>
+    <li *ngFor="let book of books">
+      <span>{{ book.title }} ({{ book.author }})</span>
+      <button (click)="editBook(book)">Edit</button>
+      <button (click)="deleteBook(book.id)">Delete</button>
+    </li>
+  </ul>
+
+  <!-- Book Form -->
+  <h3>{{ book.id ? 'Update Book' : 'Create Book' }}</h3>
+  <form (ngSubmit)="book.id ? updateBook() : addBook()">
+    <input
+      type="text"
+      [(ngModel)]="book.title"
+      name="title"
+      placeholder="Title"
+      required
+    />
+    <input
+      type="text"
+      [(ngModel)]="book.author"
+      name="author"
+      placeholder="Author"
+      required
+    />
+    <button type="submit">{{ book.id ? 'Update' : 'Create' }}</button>
+  </form>
+</div>
