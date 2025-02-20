@@ -67,7 +67,7 @@ export class BooksComponent {
     })
   }
 
-  editBook(book: any) {
+  editBook(book: Book) {
     this.book = { ...book };
   }
 }

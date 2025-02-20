@@ -48,4 +48,11 @@ tasks.named('jacocoTestReport') {
   reports {
     html.outputLocation = layout.buildDirectory.dir('coverage_report')
   }
+  classDirectories = fileTree(
+    dir: 'build/classes/java/main',
+    exclude: [
+      '**/*Handler.class',
+      '**/exception/**'
+    ]
+  )
 }
